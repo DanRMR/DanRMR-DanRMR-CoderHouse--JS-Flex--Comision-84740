@@ -1,0 +1,1696 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn English Hub</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <header>
+    <!-- NAVBAR (Offcanvas - getbootstrap.com) -->
+    <nav class="navbar navbar-expand-lg sticky-top py-lg-0">
+      <div class="container-xl">
+
+        <a class="navbar-brand" href="./index.html"> <img src="./img/Logo-no-background.png" alt="logo" class="logo">
+        </a>
+
+        <!-- hamburger button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Responsive -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+
+          <!-- X button -->
+          <div class="offcanvas-header">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+
+          <!-- links  -->
+          <div class="offcanvas-body">
+
+            <ul class="navbar-nav justify-content-end flex-grow-1">
+
+              <!-- Dropdown de Systems - DESKTOP -->
+              <li class="nav-item dropdown dropdown-hover d-block">
+                <a class="nav-link" href="./systems.html">Language Systems</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="./systems.html#pronunciation">Pronunciation</a>
+                  </li>
+                  <li><a class="dropdown-item" href="./systems.html#vocabulary">Vocabulary</a></li>
+                  <li><a class="dropdown-item" href="./systems.html#grammar">Grammar</a></li>
+                </ul>
+              </li>
+
+              <!-- Dropdwon de Skills - DESKTOP -->
+              <li class="nav-item dropdown dropdown-hover d-block">
+                <a class="nav-link" href="./skills.html">English Skills</a>
+                <ul class="dropdown-menu">
+                  <h6 class="skills">Receptive Skills</h6>
+                  <li><a class="dropdown-item" href="./skills.html#listening">Listening</a></li>
+                  <li><a class="dropdown-item" href="./skills.html#reading">Reading</a></li>
+                  <li>
+                  </li>
+                  <h6 class="skills">Productive Skills</h6>
+                  <li><a class="dropdown-item" href="./skills.html#speaking">Speaking</a></li>
+                  <li><a class="dropdown-item" href="./skills.html#listening">Writing</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./recursos.html">Recursos</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./autoevaluacion.html">Auto-evaluación</a>
+              </li>
+
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container-lg">
+
+    <section class="row autoeval-quiz">
+      <div class="col">
+        <div class="content-wrap">
+
+          <h1 class="header">Auto-evaluación</h1>
+          <div class="banner"><img class="banner-img" src="./img/Banner Autoevaluación.png" alt="banner-autoevaluación">
+          </div>
+
+          <div>
+            <p>Este formulario te ayudará a estimar tu nivel general de inglés según el Marco Común Europeo de
+              Referencia (CEFR). Está dividido en secciones que evalúan: <b>Gramática, Vocabulario, Comprensión Lectora
+                y Autopercepción</b></p>
+
+            <p><b>Este test te ayuda a estimar tu nivel de inglés según el Marco Común Europeo (CEFR): de A1
+                (principiante) a C1 (avanzado).</b></p>
+
+            <h3>Instrucciones</h3>
+            <p>A continuación encontrarás un quiz de 30 preguntas dividido en <b>Grammar, Vocabulary, Reading y
+                Autopercepción</b></p>
+
+            <ul>
+              <li>Note corrijas tus respuestas mientras respondes</li>
+              <li>No uses traductor ni ayuda externa</li>
+            </ul>
+          </div>
+
+          <!-- Quiz (formulario) -->
+          <section>
+            <div class="autoeval">
+
+              <!-- Dropdown del Quiz -->
+              <div>
+                <h2 class="quiz-title">Assessment Quiz</h2>
+              </div>
+
+              <div class="quiz-background">
+
+                <form id="quiz-form" action="#" method="post">
+
+                  <!-- GRAMMAR -->
+                  <details class="system-skill-drop">
+                    <summary>SECTION 1: GRAMMAR (6 preguntas)</summary>
+
+                    <div class="system-skill-drop-body">
+
+                      <!----- NIVEL A1 ----->
+                      <fieldset>
+                        <legend><span>Level A1</span></legend>
+
+                        <div class="">
+                          <h4>Question 1</h4>
+
+                          <p>
+                            <b>CEFR – Lo que deberías ser capaz de hacer:</b>
+                            <br>Usar el presente simple de verbos comunes en tercera persona para hablar de hechos
+                            básicos o rutinas.
+                          </p>
+
+                          <p class="italic">Choose the correct one</p>
+
+                          <p class="question">
+                            <strong>
+                              She <span class="correct-answer" id="q1-answer">__________</span> in a small town near
+                              Bogotá.
+                            </strong>
+                            <!--la idea es reemplazar la linea con la respuesta correcta una vez se evaluen las respuestas -->
+                          </p>
+
+                          <div class="multiple-choice">
+                            <div>
+                              <input id="q1-live" type="radio" name="q1" value="live" required>
+                              <label for="q1-live">live</label>
+                            </div>
+
+                            <div>
+                              <input id="q1-lives" type="radio" name="q1" value="lives">
+                              <label for="q1-lives">lives</label> <!-- correcta -->
+                            </div>
+
+                            <div>
+                              <input id="q1-living" type="radio" name="q1" value="living">
+                              <label for="q1-living">living</label>
+                            </div>
+
+                            <div>
+                              <input id="q1-is-live" type="radio" name="q1" value="is live">
+                              <label for="q1-is-live">is live</label>
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+
+                      <!------ NIVEL A2 ----->
+                      <fieldset>
+                        <legend><span>Level A2</span></legend>
+
+                        <div class="">
+                          <h4>Question 2</h4>
+
+                          <p>
+                            <b>CEFR – Lo que deberías ser capaz de hacer:</b>
+                            <br>Formar oraciones negativas en pasado simple usando correctamente el auxiliar <b>did</b>.
+                          </p>
+
+                          <p class="italic">choose the correct one</p>
+
+                          <p class="question">
+                            <strong>
+                              We didn’t <span class="correct-answer" id="q2-answer">__________</span> anything
+                              interesting last
+                              weekend.
+                            </strong>
+                          </p>
+
+                          <div class="multiple-choice">
+                            <div>
+                              <input id="q2-did" type="radio" name="q2" value="did" required>
+                              <label for="q2-did">did</label>
+                            </div>
+
+                            <div>
+                              <input id="q2-do" type="radio" name="q2" value="do">
+                              <label for="q2-do">do</label> <!-- correct -->
+                            </div>
+
+                            <div>
+                              <input id="q2-done" type="radio" name="q2" value="done">
+                              <label for="q2-done">done</label>
+                            </div>
+
+                            <div>
+                              <input id="q2-doing" type="radio" name="q2" value="doing">
+                              <label for="q2-doing">doing</label>
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+
+                      <!------ NIVEL B1------>
+                      <fieldset>
+                        <legend><span>Level B1</span></legend>
+
+                        <div class="">
+                          <h4>Question 3</h4>
+
+                          <p>
+                            <b>CEFR – Lo que deberías ser capaz de hacer:</b>
+                            <br>Usar correctamente “since” y “for” para expresar duración en el presente perfecto.
+                          </p>
+
+                          <p class="italic">Choose the correct one</p>
+
+                          <p class="question">
+                            <strong>
+                              I’ve worked here <span class="correct-answer" id="q3-answer">__________</span> 2021.
+                            </strong>
+                          </p>
+
+                          <div class="multiple-choice">
+                            <div>
+                              <input id="q3-for" type="radio" name="q3" value="for" required>
+                              <label for="q3-for">for</label>
+                            </div>
+
+                            <div>
+                              <input id="q3-during" type="radio" name="q3" value="during">
+                              <label for="q3-during">during</label>
+                            </div>
+
+                            <div>
+                              <input id="q3-since" type="radio" name="q3" value="since">
+                              <label for="q3-since">since</label> <!-- correct -->
+                            </div>
+
+                            <div>
+                              <input id="q3-from" type="radio" name="q3" value="from">
+                              <label for="q3-from">from</label>
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+
+                      <!------ NIVEL B2------>
+                      <fieldset>
+                        <legend><span>Level B2</span></legend>
+
+                        <div class="">
+                          <h4>Question 4</h4>
+
+                          <p>
+                            <b>CEFR – Lo que deberías ser capaz de hacer:</b>
+                            <br>Usar estructuras hipotéticas con “as if / as though” para describir situaciones irreales
+                            o no confirmadas.
+                          </p>
+
+                          <p class="italic">Choose the correct one</p>
+
+                          <p class="question">
+                            <strong>
+                              He talks as if he <span class="correct-answer" id="q4-answer">__________</span> the
+                              situation perfectly.
+                            </strong>
+                          </p>
+
+                          <div class="multiple-choice">
+                            <div>
+                              <input id="q4-understood" type="radio" name="q4" value="understood" required>
+                              <label for="q4-understood">understood</label> <!-- correct -->
+                            </div>
+
+                            <div>
+                              <input id="q4-understands" type="radio" name="q4" value="understands">
+                              <label for="q4-understands">understands</label>
+                            </div>
+
+                            <div>
+                              <input id="q4-has-understood" type="radio" name="q4" value="has understood">
+                              <label for="q4-has-understood">has understood</label>
+                            </div>
+
+                            <div>
+                              <input id="q4-would-understand" type="radio" name="q4" value="would understand">
+                              <label for="q4-would-understand">would understand</label>
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+
+                      <!------ NIVEL C1------>
+                      <fieldset>
+                        <legend><span>Level C1</span></legend>
+
+                        <div class="">
+                          <h4>Question 5</h4>
+
+                          <p>
+                            <b>CEFR – Lo que deberías ser capaz de hacer:</b>
+                            <br>Reconocer y usar inversión gramatical con adverbios negativos para dar énfasis en
+                            registros formales.
+                          </p>
+
+                          <p class="italic">choose the correct one</p>
+
+                          <p class="question">
+                            <strong>
+                              Rarely <span class="correct-answer" id="q5-answer">__________</span> such a strong
+                              reaction from the audience.
+                            </strong>
+                          </p>
+
+                          <div class="multiple-choice">
+                            <div>
+                              <input id="q5-we-saw" type="radio" name="q5" value="we saw" required>
+                              <label for="q5-we-saw">we saw</label>
+                            </div>
+
+                            <div>
+                              <input id="q5-did-we-see" type="radio" name="q5" value="did we see">
+                              <label for="q5-did-we-see">did we see</label> <!-- correct -->
+                            </div>
+
+                            <div>
+                              <input id="q5-we-have-seen" type="radio" name="q5" value="we have seen">
+                              <label for="q5-we-have-seen">we have seen</label>
+                            </div>
+
+                            <div>
+                              <input id="q5-saw-we" type="radio" name="q5" value="saw we">
+                              <label for="q5-saw-we">saw we</label>
+                            </div>
+                          </div>
+                        </div>
+
+
+
+                        <div class="">
+                          <h4>Question 6</h4>
+
+                          <p>
+                            <b>CEFR – Lo que deberías ser capaz de hacer:</b>
+                            <br>Usar cláusulas condicionales mixtas para hipótesis sobre pasado con consecuencias en el
+                            presente.
+                          </p>
+
+
+                          <p class="italic">choose the correct one</p>
+                          <p class="question">
+                            <strong>
+                              The report was completed on time, <span class="correct-answer"
+                                id="q6-answer">__________</span> the initial delays.
+                            </strong>
+                          </p>
+                          <div class="multiple-choice">
+                            <div>
+                              <input id="q6-although" type="radio" name="q6" value="although" required>
+                              <label for="q6-although">although</label>
+                            </div>
+
+                            <div>
+                              <input id="q6-because" type="radio" name="q6" value="because">
+                              <label for="q6-because">because</label>
+                            </div>
+
+                            <div>
+                              <input id="q6-however" type="radio" name="q6" value="however">
+                              <label for="q6-however">however</label>
+                            </div>
+
+                            <div>
+                              <input id="q6-despite" type="radio" name="q6" value="despite">
+                              <label for="q6-despite">despite</label> <!--correct-->
+                            </div>
+                          </div>
+                        </div>
+
+                      </fieldset>
+
+                    </div>
+                  </details>
+
+                  <!------------ VOCABULARY ------------>
+                  <details class="system-skill-drop">
+                    <summary>SECTION 2: VOCABULARY (12 preguntas)</summary>
+
+                    <div class="system-skill-drop-body">
+
+                      <!-------NIVEL A1------->
+                      <fieldset>
+                        <legend><span>Level A1</span></legend>
+
+                        <div class="">
+                          <h4>Question 7</h4>
+
+                          <p>
+                            <b>CEFR – Lo que deberías ser capaz de hacer:</b>
+                            <br>Reconocer vocabulario básico de rutinas diarias.
+                          </p>
+
+                          <p class="italic">Elige la palabra que completa la rutina.</p>
+
+                          <p class="question">
+                            <strong>
+                              I <span class="correct-answer" id="q7-answer">__________</span> at 7 a.m. and go to work.
+                            </strong>
+                          </p>
+
+                          <div class="multiple-choice">
+                            <div>
+                              <input id="q7-wake-up" type="radio" name="q7" value="wake up" required>
+                              <label for="q7-wake-up">wake up</label> <!--correct-->
+                            </div>
+
+                            <div>
+                              <input id="q7-write-up" type="radio" name="q7" value="write up">
+                              <label for="q7-write-up">write up</label>
+                            </div>
+
+                            <div>
+                              <input id="q7-take-up" type="radio" name="q7" value="take up">
+                              <label for="q7-take-up">take up</label>
+                            </div>
+
+                            <div>
+                              <input id="q7-make-up" type="radio" name="q7" value="make up">
+                              <label for="q7-make-up">make up</label>
+                            </div>
+                          </div>
+                        </div>
+
+
+
+                        <div class="">
+                          <h4>Question 8</h4>
+
+                          <p>
+                            <b>CEFR – Lo que deberías ser capaz de hacer:</b>
+                            <br>Comprender vocabulario común de comida y bebida.
+                          </p>
+
+                          <p class="italic">Elige la opción que completa la frase.</p>
+
+                          <p class="question">
+                            <strong>
+                              She wants a cup of <span class="correct-answer" id="q8-answer">__________</span>.
+                            </strong>
+                          </p>
+
+                          <div class="multiple-choice">
+                            <div>
+                              <input id="q8-coffee" type="radio" name="q8" value="coffee" required>
+                              <label for="q8-coffee">coffee</label> <!--correct-->
+                            </div>
+
+                            <div>
+                              <input id="q8-cookie" type="radio" name="q8" value="cookie">
+                              <label for="q8-cookie">cookie</label>
+                            </div>
+
+                            <div>
+                              <input id="q8-cooker" type="radio" name="q8" value="cooker">
+                              <label for="q8-cooker">cooker</label>
+                            </div>
+
+                            <div>
+                              <input id="q8-copy" type="radio" name="q8" value="copy">
+                              <label for="q8-copy">copy</label>
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+
+                      <!-------NIVEL A2------->
+                      <fieldset>
+                        <legend><span>Level A2</span></legend>
+
+                        <div class="">
+                          <h4>Question 9</h4>
+
+                          <p>
+                            <b>CEFR – Lo que deberías ser capaz de hacer:</b>
+                            <br>Usar vocabulario para describir planes simples.
+                          </p>
+
+                          <p class="italic">Elige la palabra que mejor encaja.</p>
+
+                          <p class="question">
+                            <strong>
+                              We plan to <span class="correct-answer" id="q9-answer">__________</span> a small party
+                              this weekend.
+                            </strong>
+                          </p>
+
+                          <div class="multiple-choice">
+                            <div>
+                              <input id="q9-do" type="radio" name="q9" value="do" required>
+                              <label for="q9-do">do</label>
+                            </div>
+
+                            <div>
+                              <input id="q9-make" type="radio" name="q9" value="make">
+                              <label for="q9-make">make</label>
+                            </div>
+
+                            <div>
+                              <input id="q9-have" type="radio" name="q9" value="have">
+                              <label for="q9-have">have</label> <!--correct-->
+                            </div>
+
+                            <div>
+                              <input id="q9-take" type="radio" name="q9" value="take">
+                              <label for="q9-take">take</label>
+                            </div>
+                          </div>
+                        </div>
+
+
+
+                        <div class="">
+                          <h4>Question 10</h4>
+
+                          <p>
+                            <b>CEFR – Lo que deberías ser capaz de hacer:</b>
+                            <br>Comprender vocabulario de viajes básicos.
+                          </p>
+
+                          <p class="italic">Elige la palabra correcta para el contexto.</p>
+
+                          <p class="question">
+                            <strong>
+                              Our flight was <span class="correct-answer" id="q10-answer">__________</span>, so we
+                              arrived late.
+                            </strong>
+                          </p>
+
+                          <div class="multiple-choice">
+
+                            <div>
+                              <input id="q10-declined" type="radio" name="q10" value="declined">
+                              <label for="q10-declined">declined</label>
+                            </div>
+
+                            <div>
+                              <input id="q10-deleted" type="radio" name="q10" value="deleted">
+                              <label for="q10-deleted">deleted</label>
+                            </div>
+
+                            <div>
+                              <input id="q10-delivered" type="radio" name="q10" value="delivered">
+                              <label for="q10-delivered">delivered</label>
+                            </div>
+
+                            <div>
+                              <input id="q10-delayed" type="radio" name="q10" value="delayed" required>
+                              <label for="q10-delayed">delayed</label> <!--correct-->
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+
+                      <!-------NIVEL B1------->
+                      <fieldset>
+                        <legend><span>Level B1</span></legend>
+
+                        <div class="">
+                          <h4>Question 11</h4>
+
+                          <p>
+                            <b>CEFR – Lo que deberías ser capaz de hacer:</b>
+                            <br>Entender colocaciones comunes en trabajo y estudio.
+                          </p>
+
+                          <p class="italic">Elige la colocación más natural.</p>
+
+                          <p class="question">
+                            <strong>
+                              She will <span class="correct-answer" id="q11-answer">__________</span> a presentation
+                              tomorrow.
+                            </strong>
+                          </p>
+
+                          <div class="multiple-choice">
+                            <div>
+                              <input id="q11-do" type="radio" name="q11" value="do" required>
+                              <label for="q11-do">do</label>
+                            </div>
+
+                            <div>
+                              <input id="q11-give" type="radio" name="q11" value="give">
+                              <label for="q11-give">give</label> <!--correct-->
+                            </div>
+
+                            <div>
+                              <input id="q11-make" type="radio" name="q11" value="make">
+                              <label for="q11-make">make</label>
+                            </div>
+
+                            <div>
+                              <input id="q11-take" type="radio" name="q11" value="take">
+                              <label for="q11-take">take</label>
+                            </div>
+                          </div>
+                        </div>
+
+
+
+                        <div class="">
+                          <h4>Question 12</h4>
+
+                          <p>
+                            <b>CEFR – Lo que deberías ser capaz de hacer:</b>
+                            <br>Usar vocabulario para expresar opinión moderada.
+                          </p>
+
+                          <p class="italic">Elige la palabra que mejor expresa una opinión cauta.</p>
+
+                          <p class="question">
+                            <strong>
+                              I’m not sure, but I <span class="correct-answer" id="q12-answer">__________</span> it’s a
+                              good idea.
+                            </strong>
+                          </p>
+
+                          <div class="multiple-choice">
+
+                            <div>
+                              <input id="q12-guess" type="radio" name="q12" value="guess">
+                              <label for="q12-guess">guess</label>
+                            </div>
+
+                            <div>
+                              <input id="q12-suppose" type="radio" name="q12" value="suppose">
+                              <label for="q12-suppose">suppose</label>
+                            </div>
+
+                            <div>
+                              <input id="q12-think" type="radio" name="q12" value="think" required>
+                              <label for="q12-think">think</label> <!--correct-->
+                            </div>
+
+                            <div>
+                              <input id="q12-believe" type="radio" name="q12" value="believe">
+                              <label for="q12-believe">believe</label>
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+
+                      <!-------NIVEL B1-B2 (Bridge)------->
+                      <fieldset>
+                        <legend><span>Level B1-B2 (Bridge)</span></legend>
+
+                        <div class="">
+                          <h4>Question 13</h4>
+
+                          <p>
+                            <b>CEFR – Lo que deberías ser capaz de hacer:</b>
+                            <br>Inferir significado de phrasal verbs en contexto (transición B1→B2).
+                          </p>
+
+                          <p class="italic">Elige el significado más adecuado según el contexto.</p>
+
+                          <p class="question">
+                            <strong>
+                              After a long pause, she finally CAME UP WITH a solution.
+                            </strong>
+                          </p>
+
+                          <div class="multiple-choice">
+                            <div>
+                              <input id="q13-rejected" type="radio" name="q13" value="rejected" required>
+                              <label for="q13-rejected">rejected</label>
+                            </div>
+
+                            <div>
+                              <input id="q13-proposed" type="radio" name="q13" value="proposed">
+                              <label for="q13-proposed">proposed</label> <!--correct-->
+                            </div>
+
+
+                            <div>
+                              <input id="q13-discovered-by-accident" type="radio" name="q13"
+                                value="discovered by accident">
+                              <label for="q13-discovered-by-accident">discovered by accident</label>
+                            </div>
+
+                            <div>
+                              <input id="q13-delayed" type="radio" name="q13" value="delayed">
+                              <label for="q13-delayed">delayed</label>
+                            </div>
+                          </div>
+                        </div>
+
+
+
+                        <div class="">
+                          <h4>Question 14</h4>
+
+                          <p>
+                            <b>CEFR – Lo que deberías ser capaz de hacer:</b>
+                            <br>Distinguir matices de adjetivos en contexto (grado y registro).
+                          </p>
+
+                          <p class="italic">Elige el adjetivo que mejor encaja con el tono.</p>
+
+                          <p class="question">
+                            <strong>
+                              The report is <span class="correct-answer" id="q14-answer">__________</span>; we need to
+                              check the numbers again.
+                            </strong>
+                          </p>
+
+                          <div class="multiple-choice">
+                            <div>
+                              <input id="q14-accurate" type="radio" name="q14" value="accurate" required>
+                              <label for="q14-accurate">accurate</label>
+                            </div>
+
+                            <div>
+                              <input id="q14-approximate" type="radio" name="q14" value="approximate">
+                              <label for="q14-approximate">approximate</label>
+                            </div>
+
+                            <div>
+                              <input id="q14-flawed" type="radio" name="q14" value="flawed">
+                              <label for="q14-flawed">flawed</label> <!--correct-->
+                            </div>
+
+                            <div>
+                              <input id="q14-precise" type="radio" name="q14" value="precise">
+                              <label for="q14-precise">precise</label>
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+
+                      <!-------NIVEL B2------->
+                      <fieldset>
+                        <legend><span>Level B2</span></legend>
+
+                        <div class="">
+                          <h4>Question 15</h4>
+
+                          <p>
+                            <b>CEFR – Lo que deberías ser capaz de hacer:</b>
+                            <br>Usar vocabulario para describir causas y efectos.
+                          </p>
+
+                          <p class="italic">Elige la palabra que mejor expresa causa.</p>
+
+                          <p class="question">
+                            <strong>
+                              The delay was <span class="correct-answer" id="q15-answer">__________</span> a system
+                              error.
+                            </strong>
+                          </p>
+
+                          <div class="multiple-choice">
+                            <div>
+                              <input id="q15-due-to" type="radio" name="q15" value="due to" required>
+                              <label for="q15-due-to">due to</label> <!--correct-->
+                            </div>
+
+                            <div>
+                              <input id="q15-despite" type="radio" name="q15" value="despite">
+                              <label for="q15-despite">despite</label>
+                            </div>
+
+                            <div>
+                              <input id="q15-across" type="radio" name="q15" value="across">
+                              <label for="q15-across">across</label>
+                            </div>
+
+                            <div>
+                              <input id="q15-beyond" type="radio" name="q15" value="beyond">
+                              <label for="q15-beyond">beyond</label>
+                            </div>
+                          </div>
+                        </div>
+
+
+
+                        <div class="">
+                          <h4>Question 16</h4>
+
+                          <p>
+                            <b>CEFR – Lo que deberías ser capaz de hacer:</b>
+                            <br>Comprender vocabulario de negociación y acuerdos.
+                          </p>
+
+                          <p class="italic">Elige la opción que mejor completa la frase.</p>
+
+                          <p class="question">
+                            <strong>
+                              They reached a <span class="correct-answer" id="q16-answer">__________</span> after two
+                              hours of discussion.
+                            </strong>
+                          </p>
+
+                          <div class="multiple-choice">
+
+                            <div>
+                              <input id="q16-complaint" type="radio" name="q16" value="complaint">
+                              <label for="q16-complaint">complaint</label>
+                            </div>
+
+                            <div>
+                              <input id="q16-component" type="radio" name="q16" value="component">
+                              <label for="q16-component">component</label>
+                            </div>
+
+                            <div>
+                              <input id="q16-comparison" type="radio" name="q16" value="comparison">
+                              <label for="q16-comparison">comparison</label>
+                            </div>
+
+                            <div>
+                              <input id="q16-compromise" type="radio" name="q16" value="compromise" required>
+                              <label for="q16-compromise">compromise</label> <!--correct-->
+                            </div>
+
+                          </div>
+                        </div>
+                      </fieldset>
+
+                      <!-------NIVEL C1------->
+                      <fieldset>
+                        <legend><span>Level C1</span></legend>
+
+                        <div class="">
+                          <h4>Question 17</h4>
+
+                          <p>
+                            <b>CEFR – Lo que deberías ser capaz de hacer:</b>
+                            <br>Seleccionar vocabulario preciso con matiz formal.
+                          </p>
+
+                          <p class="italic">Elige la palabra que mejor encaja en un correo formal.</p>
+
+                          <p class="question">
+                            <strong>
+                              We appreciate your <span class="correct-answer" id="q17-answer">__________</span> to
+                              improving safety standards.
+                            </strong>
+                          </p>
+
+                          <div class="multiple-choice">
+                            <div>
+                              <input id="q17-effort" type="radio" name="q17" value="effort" required>
+                              <label for="q17-effort">effort</label>
+                            </div>
+
+                            <div>
+                              <input id="q17-attempt" type="radio" name="q17" value="attempt">
+                              <label for="q17-attempt">attempt</label>
+                            </div>
+
+                            <div>
+                              <input id="q17-commitment" type="radio" name="q17" value="commitment">
+                              <label for="q17-commitment">commitment</label> <!--correct-->
+                            </div>
+
+                            <div>
+                              <input id="q17-try" type="radio" name="q17" value="try">
+                              <label for="q17-try">try</label>
+                            </div>
+                          </div>
+                        </div>
+
+
+
+                        <div class="">
+                          <h4>Question 18</h4>
+
+                          <p>
+                            <b>CEFR – Lo que deberías ser capaz de hacer:</b>
+                            <br>Comprender vocabulario abstracto sobre políticas y impacto.
+                          </p>
+
+                          <p class="italic">Elige la palabra que mejor completa la idea.</p>
+
+                          <p class="question">
+                            <strong>
+                              The new policy had unintended <span class="correct-answer"
+                                id="q18-answer">__________</span> on local businesses.
+                            </strong>
+                          </p>
+
+                          <div class="multiple-choice">
+                            <div>
+                              <input id="q18-effects" type="radio" name="q18" value="effects" required>
+                              <label for="q18-effects">effects</label>
+                            </div>
+
+                            <div>
+                              <input id="q18-consequences" type="radio" name="q18" value="consequences">
+                              <label for="q18-consequences">consequences</label> <!--correct-->
+                            </div>
+
+                            <div>
+                              <input id="q18-results" type="radio" name="q18" value="results">
+                              <label for="q18-results">results</label>
+                            </div>
+
+                            <div>
+                              <input id="q18-outcomes" type="radio" name="q18" value="outcomes">
+                              <label for="q18-outcomes">outcomes</label>
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+
+                    </div>
+                  </details>
+
+                  <!------------ READING ------------>
+                  <details class="system-skill-drop">
+                    <summary>SECTION 3: READING (12 preguntas)</summary>
+
+                    <div class="system-skill-drop-body">
+
+                      <h4>Instrucciones</h4>
+                      <p>Lee cada texto en inglés y responde la(s) pregunta(s) relacionadas. Cada pregunta evalúa una
+                        sola habilidad de lectura. El lenguaje del texto y de la pregunta está adaptado al nivel CEFR
+                        indicado.</p>
+
+                      <!-------NIVEL A1------->
+                      <fieldset>
+                        <legend><span>Level A1</span></legend>
+
+                        <div class="">
+                          <p>
+                            <b>CEFR – Lo que deberías ser capaz de hacer:</b>
+                            <br>Comprender frases simples sobre rutinas y datos concretos.
+                          </p>
+
+                          <div class="text-box">
+                            <h5>Text:</h5>
+                            <p class="italic">Anna wakes up at 6:30. She eats toast and coffee. She walks to the bus
+                              stop and takes bus number 5 to work. On Saturdays she visits her sister.</p>
+                          </div>
+
+                          <h4>Question 19</h4>
+
+
+
+                          <p class="question">
+                            <strong> What time does Anna wake up?</strong>
+                          </p>
+
+                          <div class="multiple-choice">
+
+                            <div><input id="q19-At-seven-thirty" type="radio" name="q19" value="At seven thirty" r
+                                equired>
+                              <label for="q19-At-seven-thirty">At seven thirty</label>
+                            </div>
+
+                            <div>
+                              <input id="q19-At-five-thirty" type="radio" name="q19" value="At five thirty">
+                              <label for="q19-At-five-thirty">At five thirty</label>
+                            </div>
+
+                            <div>
+                              <input id="q19-At-six-thirty" type="radio" name="q19" value="At six thirty">
+                              <label for="q19-At six thirty">At six thirty</label> <!--correct-->
+                            </div>
+
+                            <div>
+                              <input id="q19-At-eight" type="radio" name="q19" value="At eight">
+                              <label for="q19-At-eight">At eight</label>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="">
+                          <h4>Question 20</h4>
+
+                          <p class="question">
+                            <strong>What does Anna do on Saturdays?</strong>
+                          </p>
+
+                          <div class="multiple-choice">
+                            <div>
+                              <input id="q20-She-goes-to-work" type="radio" name="q20" value="She goes to work"
+                                required>
+                              <label for="q20-She-goes-to-work">She goes to work</label>
+                            </div>
+
+                            <div>
+                              <input id="q20-She-visits-her-sister" type="radio" name="q20"
+                                value="She visits her sister">
+                              <label for="q20-She-visits-her-sister">She visits her sister</label> <!--correct-->
+                            </div>
+
+                            <div>
+                              <input id="q20-She-takes-bus-number-5" type="radio" name="q20"
+                                value="She takes bus number 5">
+                              <label for="q20-She-takes-bus-number-5">She takes bus number 5</label>
+                            </div>
+
+                            <div>
+                              <input id="q20-She-eats-dinner" type="radio" name="q20" value="She eats dinner">
+                              <label for="q20-She-eats-dinner">She eats dinner</label>
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+
+                      <!-------NIVEL A2------->
+                      <fieldset>
+                        <legend><span>Level A2</span></legend>
+
+                        <div class="">
+                          <p>
+                            <b>CEFR – Lo que deberías ser capaz de hacer:</b>
+                            <br>Comprender instrucciones simples y unir información en dos frases.
+                          </p>
+
+                          <div class="text-box">
+                            <h5>Text:</h5>
+                            <p class="italic">
+                              The community centre opens at 9 a.m. on weekdays. To join the yoga class
+                              you must register online and bring a towel. The class starts at 10 a.m. and lasts one
+                              hour.
+                            </p>
+                          </div>
+
+                          <h4>Question 21</h4>
+
+                          <p class="question">
+                            <strong>If you want to attend the yoga class, what must you do first?</strong>
+                          </p>
+
+                          <div class="multiple-choice">
+                            <div>
+                              <input id="q21-bring-a-towel" type="radio" name="q21" value="Bring a towel" required>
+                              <label for="q21-bring-a-towel">Bring a towel to the centre</label>
+                            </div>
+
+                            <div>
+                              <input id="q21-Register-online" type="radio" name="q21" value="Register online">
+                              <label for="q21-Register-online">Register online</label> <!--correct-->
+                            </div>
+
+                            <div>
+                              <input id="q21-Arrive-at-10" type="radio" name="q21" value="Arrive at 10">
+                              <label for="q21-Arrive-at-10. exactly">Arrive at 10 a.m. exactly</label>
+                            </div>
+
+                            <div>
+                              <input id="q21-Pay-at-the-door" type="radio" name="q21" value="Pay at the door">
+                              <label for="q21-Pay-at-the-door">Pay at the door</label>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="">
+                          <h4>Question 22</h4>
+
+                          <p class="question">
+                            <strong>How long is the yoga class?</strong>
+                          </p>
+
+                          <div class="multiple-choice">
+
+                            <div>
+                              <input id="q22-Thirty-minutes" type="radio" name="q22" value="Thirty minutes" required>
+                              <label for="q22-Thirty-minutes">Thirty minutes</label>
+                            </div>
+
+                            <div>
+                              <input id="q22-two-hours" type="radio" name="q22" value="two hours">
+                              <label for="q22-two-hours">two hours</label>
+                            </div>
+
+                            <div>
+                              <input id="q22-one-hour" type="radio" name="q22" value="one hour">
+                              <label for="q22-one-hour">one hour</label>
+                            </div>
+
+                            <div>
+                              <input id="q22-Forty-five-minutes" type="radio" name="q22" value="Forty-five minutes">
+                              <label for="q22-Forty-five-minutes">Forty-five minutes</label> <!--correct-->
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+
+                      <!-------NIVEL B1------->
+                      <fieldset>
+                        <legend><span>Level B1</span></legend>
+
+                        <div class="">
+
+                          <p>
+                            <b>CEFR – Lo que deberías ser capaz de hacer:</b>
+                            <br>Identificar la idea principal y hacer inferencias simples sobre intención o
+                            consecuencia.
+                          </p>
+
+                          <div class="text-box">
+                            <h5>Text:</h5>
+                            <p class="italic">
+                              Last month the local library started a weekend reading club for adults.
+                              Attendance has grown slowly; most participants say they enjoy meeting others and
+                              discussing books. The organisers plan to add a monthly guest speaker if interest
+                              continues.
+                            </p>
+                          </div>
+
+                          <h4>Question 23</h4>
+                          <p class="question">
+                            <strong>What is the main reason people attend the reading club?</strong>
+                          </p>
+
+                          <div class="multiple-choice">
+                            <div><input id="q23-listen-to-guest" type="radio" name="q23" value="listen to guest" r
+                                equired>
+                              <label for="q23-listen-to-guest">To listen to guest speakers</label>
+                            </div>
+
+                            <div>
+                              <input id="q23-borrow-more-books" type="radio" name="q23" value="borrow more books">
+                              <label for="q23-borrow-more-books">To borrow more books from the library</label>
+                            </div>
+
+                            <div>
+                              <input id="q23-study-alone" type="radio" name="q23" value="study alone">
+                              <label for="q23-study-alone">To study alone quietly</label>
+                            </div>
+
+                            <div>
+                              <input id="q23-To-meet-others" type="radio" name="q23" value="To meet others">
+                              <label for="q23-To-meet-others">To meet others and discuss books</label> <!--correct-->
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="text-box">
+                          <h5>Text:</h5>
+                          <p class="italic">
+                            A small café near the station changed its menu to include vegetarian
+                            options. Sales increased slightly, but the owner noticed that some regular customers now
+                            visit less often. He thinks the change attracted new customers but also changed the café’s
+                            atmosphere.
+                          </p>
+                        </div>
+
+                        <div class="">
+                          <h4>Question 24</h4>
+
+                          <p class="question">
+                            <strong>What can be inferred about the menu change?</strong>
+                          </p>
+
+                          <div class="multiple-choice">
+                            <div>
+                              <input id="q24-happier-customers" type="radio" name="q24" value="happier customers"
+                                required>
+                              <label for="q24-happier-customers">It only made regular customers happier.</label>
+                            </div>
+
+                            <div>
+                              <input id="q24-positive-negative-effects" type="radio" name="q24"
+                                value="positive-negative-effects">
+                              <label for="q24-positive-negative-effects">It had both positive and negative
+                                effects.</label> <!--correct-->
+                            </div>
+
+                            <div>
+                              <input id="q24-drop-in-sales" type="radio" name="q24" value="drop in sales">
+                              <label for="q24-drop-in-sales">It caused sales to drop significantly.</label>
+                            </div>
+
+                            <div>
+                              <input id="q24-close-earlier" type="radio" name="q24" value="close earlier">
+                              <label for="q24-close-earlier">It made the café close earlier.</label>
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+
+                      <!-------NIVEL B1-B2 (Bridge)------->
+                      <fieldset>
+                        <legend><span>Level B1</span></legend>
+
+                        <div class="">
+
+                          <p>
+                            <b>CEFR – Lo que deberías ser capaz de hacer:</b>
+                            <br>Inferir el significado de expresiones en contexto y captar matices que confirman la
+                            transición B1→B2.
+                          </p>
+
+                          <div class="text-box">
+                            <h5>Text:</h5>
+                            <p class="italic">
+                              When the team hit a problem, they met and came up with several ideas. Some were simple
+                              fixes; others needed more time. In the end they chose a plan that reduced costs and kept
+                              most staff roles unchanged.
+                            </p>
+                          </div>
+
+                          <h4>Question 25</h4>
+                          <p class="question">
+                            <strong>What does <b>“came up with”</b> mean in this context?</strong>
+                          </p>
+
+                          <div class="multiple-choice">
+                            <div>
+                              <input id="q25-reject-ideas" type="radio" name="q25" value="reject ideas" required>
+                              <label for="q25-reject-ideas">To reject ideas</label>
+                            </div>
+
+                            <div>
+                              <input id="q25-propose-ideas" type="radio" name="q25" value="propose ideas">
+                              <label for="q25-propose-ideas">To create or propose ideas</label> <!--correct-->
+                            </div>
+
+                            <div>
+                              <input id="q25-delay-the-meeting" type="radio" name="q25" value="delay the meeting">
+                              <label for="q25-delay-the-meeting">To delay the meeting</label>
+                            </div>
+
+                            <div>
+                              <input id="q25-finish-the-project" type="radio" name="q25" value="finish the project">
+                              <label for="q25-finish-the-project">To finish the project</label>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="text-box">
+                          <h5>Text:</h5>
+                          <p class="italic">
+                            The pilot project showed promising results, though not all metrics improved. The report
+                            described the outcome as encouraging but preliminary, suggesting further testing before a
+                            full rollout.
+                          </p>
+                        </div>
+
+                        <div class="">
+                          <h4>Question 26</h6>
+
+                            <p class="question">
+                              <strong>What does <b>“encouraging but preliminary”</b> imply about the results?</strong>
+                            </p>
+
+                            <div class="multiple-choice">
+                              <div>
+                                <input id="q26-complete-results" type="radio" name="q26" value="complete results"
+                                  required>
+                                <label for="q26-complete-results">The results are final and complete.</label>
+                              </div>
+
+                              <div>
+                                <input id="q26-potential-results" type="radio" name="q26" value="potential results">
+                                <label bel for="q26-potential-results">The results show potential but need
+                                  moreproof.</label>
+                              </div>
+                              <!-- correct answer -->
+
+                              <div>
+                                <input id="q26-negative-results" type="radio" name="q26" value="negative results">
+                                <label bel for="q26-negative-results">The results are negative and should be
+                                  ignored.</label>
+                              </div>
+
+                              <div>
+                                <input id="q26-irrelevant-results" type="radio" name="q26" value="irrelevant results">
+                                <label for="q26-irrelevant-results">The results are irrelevant to the project.</label>
+                              </div>
+                            </div>
+                        </div>
+                      </fieldset>
+
+                      <!-------NIVEL B2------->
+                      <fieldset>
+                        <legend><span>Level B1</span></legend>
+
+                        <div class="">
+
+                          <p>
+                            <b>CEFR – Lo que deberías ser capaz de hacer:</b>
+                            <br>Identificar relaciones causa–efecto, contrastes y conclusiones implícitas en textos
+                            informativos.
+                          </p>
+
+                          <div class="text-box">
+                            <h5>Text:</h5>
+                            <p class="italic">
+                              A city introduced a bike-share program to reduce traffic congestion and pollution. In the
+                              first year, bike use increased and car trips in the centre fell by 8%. However, some
+                              residents complained about fewer parking spaces and the need for better bike lanes. City
+                              planners now consider expanding protected lanes and adjusting parking rules to balance
+                              benefits and concerns.
+                            </p>
+                          </div>
+
+                          <h4>Question 27</h4>
+                          <p class="question">
+                            <strong>Which statement best summarises the situation?</strong>
+                          </p>
+
+                          <div class="multiple-choice">
+                            <div>
+                              <input id="q27-bike-program-effects" type="radio" name="q27" value="bike program effects"
+                                required>
+                              <label for="q27-bike-program-effects">The bike program had only negative effects on the
+                                city.</label>
+                            </div>
+
+                            <div>
+                              <input id="q27-reduced-car-trips" type="radio" name="q27" value="reduced car trips">
+                              <label for="q27-reduced-car-trips">The program reduced car trips but created new local
+                                concerns.</label> <!-- correct answer -->
+                            </div>
+
+                            <div>
+                              <input id="q27-program-failed" type="radio" name="q27" value="program failed">
+                              <label for="q27-program-failed">The program failed to change travel habits.</label>
+                            </div>
+
+                            <div>
+                              <input id="q27-resident-support" type="radio" name="q27" value="resident support">
+                              <label for="q27-resident-support">Residents unanimously supported removing parking
+                                spaces.</label>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="text-box">
+                          <h5>Text:</h5>
+                          <p class="italic">
+                            A company switched to remote meetings to save time and travel costs. Managers reported
+                            faster decision-making, but some teams felt less connected and missed informal conversations
+                            that used to spark ideas. To address this, the company now schedules short weekly social
+                            check-ins and encourages informal chat channels alongside formal meetings.
+                          </p>
+                        </div>
+
+                        <div class="">
+                          <h4>Question 28</h4>
+
+                          <p class="question">
+                            <strong>What is the main trade-off described in the text?</strong>
+                          </p>
+
+                          <div class="multiple-choice">
+                            <div>
+                              <input id="q28-decisions-vs-connection" type="radio" name="q28"
+                                value="decisions vs connection" required>
+                              <label for="q28-decisions-vs-connection">Faster decisions versus reduced personal
+                                connection.</label> <!--correct-->
+                            </div>
+
+                            <div>
+                              <input id="q28-costs-vs-ideas" type="radio" name="q28" value="costs vs ideas">
+                              <label for="q28-costs-vs-ideas">Higher travel costs versus better ideas.</label>
+                            </div>
+
+                            <div>
+                              <input id="q28-meetings-vs-decisions" type="radio" name="q28"
+                                value="meetings vs decisions">
+                              <label for="q28-meetings-vs-decisions">More meetings versus fewer decisions.</label>
+                            </div>
+
+                            <div>
+                              <input id="q28-work-vs-travel" type="radio" name="q28" value="work vs travel">
+                              <label for="q28-work-vs-travel">Less work versus more travel.</label>
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+
+                      <!-------NIVEL C1------->
+                      <fieldset>
+                        <legend><span>Level B1</span></legend>
+
+                        <div class="">
+
+                          <p>
+                            <b>CEFR – Lo que deberías ser capaz de hacer:</b>
+                            <br>Leer críticamente, identificar postura, limitaciones e implicaciones; distinguir matices
+                            retóricos.
+                          </p>
+
+                          <div class="text-box">
+                            <h5>Text:</h5>
+                            <p class="italic">
+                              Governments often praise short-term economic growth as evidence of successful policy. Yet
+                              growth figures can mask structural weaknesses: rising inequality, underinvestment in
+                              public services, and environmental costs. Analysts argue that focusing solely on GDP
+                              overlooks long-term sustainability. A balanced approach would combine growth targets with
+                              measures of social well-being and environmental impact. Critics of this view warn that
+                              adding too many metrics can complicate policy decisions and dilute accountability.
+                              Proponents respond that nuanced indicators encourage policies that are resilient and
+                              equitable over time.
+                            </p>
+                          </div>
+
+                          <h4>Question 29</h4>
+                          <p class="question">
+                            <strong>Which limitation of using GDP as the main policy measure is highlighted in the
+                              text?</strong>
+                          </p>
+
+                          <div class="multiple-choice">
+                            <div>
+                              <input id="q29-increased-inequality" type="radio" name="q29" value="increased inequality"
+                                required>
+                              <label for="q29-increased-inequality">GDP always increases inequality.</label>
+                            </div>
+
+                            <div>
+                              <input id="q29-ignores-factors" type="radio" name="q29" value="ignores factors">
+                              <label for="q29-ignores-factors">GDP ignores social and environmental factors.</label>
+                            </div>
+                            <!--correct-->
+
+                            <div>
+                              <input id="q29-reliable-indicator" type="radio" name="q29" value="reliable indicator">
+                              <label for="q29-reliable-indicator">GDP is the only reliable economic indicator.</label>
+                            </div>
+
+                            <div><input id="q29-simplifies-dicisions" type="radio" name="q29" v
+                                alue="simplifies dicisions">
+                              <label for="q29-simplifies-dicisions">GDP simplifies policy decisions effectively.</label>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="text-box">
+                          <h5>Text:</h5>
+                          <p class="italic">
+                            A recent initiative aimed to increase transparency in public procurement by publishing
+                            contract details online. Early results show improved vendor competition and lower prices.
+                            However, some officials caution that transparency alone cannot prevent collusion or poor
+                            project design; it must be paired with strong oversight and professional procurement skills.
+                            The initiative’s advocates argue that transparency is a necessary first step, but they
+                            acknowledge that capacity-building and legal reforms are essential to secure lasting
+                            improvements.
+                          </p>
+                        </div>
+
+                        <div class="">
+                          <h4>Question 30</h4>
+
+                          <p class="question">
+                            <strong>What is the author’s overall stance toward the transparency initiative?</strong>
+                          </p>
+
+                          <div class="multiple-choice">
+                            <div>
+                              <input id="q30-Fully-dismissive" type="radio" name="q30" value="Fully dismissive"
+                                required>
+                              <label for="q30-Fully-dismissive">Fully dismissive; transparency is useless.</label>
+                            </div>
+
+                            <div>
+                              <input id="q30-Unconditionally-supportive" type="radio" name="q30"
+                                value="Unconditionally supportive">
+                              <label for="q30-Unconditionally-supportive">Unconditionally supportive; transparency
+                                solves all problems.</label>
+                            </div>
+
+                            <div>
+                              <input id="q30-Cautiously-positive" type="radio" name="q30" value="Cautiously positive">
+                              <label for="q30-Cautiously-positive">Cautiously positive; transparency helps but needs
+                                complementary measures.</label> <!--correct-->
+                            </div>
+
+                            <div>
+                              <input id="q30-Neutral" type="radio" name="q30" value="Neutral">
+                              <label for="q30-Neutral">Neutral; the initiative has no observable effects.</label>
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+
+                    </div>
+                  </details>
+
+                  <div id="resultadoHabilidades">
+                    <h3 class="result" id="numeroRespuestasCorrectas"></h3>
+                    <p class="nivel-ingles-general" id="resultadoNivelGeneral"></p>
+                    <p class="nivel-grammar" id="resultadoNivelGrammar"></p>
+                    <p class="nivel-vocabulary" id="resultadoNivelVocabulary"></p>
+                    <p class="nivel-reading" id="resultadoNivelReading"></p>
+                  </div>
+
+                  <button class="boton boton-evaluar" type="submit">Assess my level</button>
+                  <button class="boton boton-reset" type="reset">Reset</button>
+
+                </form>
+
+
+                <div class="score-chart">
+                  <!-- solo va a aparecer una vez se calcule la respuesta  -->
+                  <!--
+                  <table class="table">
+                    <tr>
+                      <th>SECCIÓN</th>
+                      <th>NÚMERO DE PREGUNTAS</th>
+                      <th>RESPUESTAS CORRECTAS</th>
+                    </tr>
+                    <tr>
+                      <td><b>Grammar</b></td>
+                      <td>6</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><b>Vocabulary</b></td>
+                      <td>12</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><b>Reading</b></td>
+                      <td>12</td>
+                      <td></td>
+                    </tr>
+                    -->
+
+                  </table>
+                </div>
+
+              </div>
+
+            </div>
+          </section>
+
+          <!-- <div>
+            <h3>PASO 3: Calcula tu nivel por sección</h3>
+
+            <div class="test-criteria">
+              <table class="table table-hover">
+                <tr>
+                  <th>Level</th>
+                  <th>GRAMMAR (10 preguntas)</th>
+                  <th>VOCABULARY (8 preguntas)</th>
+                  <th>READING (8 preguntas)</th>
+                </tr>
+
+                <tr>
+                  <td><b>A1</b></td>
+                  <td>Respuestas acertadas: <b>0–3</b> </td>
+                  <td>Respuestas acertadas: <b>0–2</b> </td>
+                  <td>Respuestas acertadas: <b>3–4</b></td>
+                </tr>
+                <tr>
+                  <td><b>A2</b></td>
+                  <td>Respuestas acertadas: <b>4–6</b></td>
+                  <td>Respuestas acertadas: <b>3–4</b></td>
+                  <td>Respuestas acertadas: <b>3–4</b></td>
+                </tr>
+                <tr>
+                  <td><b>B1</b></td>
+                  <td>Respuestas acertadas: <b>7–8</b></td>
+                  <td>Respuestas acertadas: <b>5–6</b></td>
+                  <td>Respuestas acertadas: <b>5–6</b></td>
+                </tr>
+                <tr>
+                  <td><b>B2</b></td>
+                  <td>Respuestas acertadas: <b>9</b></td>
+                  <td>Respuestas acertadas: <b>7</b></td>
+                  <td>Respuestas acertadas: <b>7</b></td>
+                </tr>
+                <tr>
+                  <td><b>C1</b></td>
+                  <td>Respuestas acertadas: <b>10</b></td>
+                  <td>Respuestas acertadas: <b>8</b></td>
+                  <td>Respuestas acertadas: <b>8</b></td>
+                </tr>
+              </table>
+            </div>
+          </div> -->
+
+          <!-- Explicación Nivel Real -->
+          <div class="content-box">
+            <h2>REGLA: ¿Cuál es tu nivel real?</h3>
+
+              <div>
+                <p><b>Tu nivel real es el último nivel que dominas de forma consistente.</b></p>
+                <p>Eso significa:</p>
+                <ul>
+                  <li> Acertaste varias preguntas de ese nivel </li>
+                  <li>También acertaste las preguntas más fáciles de los niveles anteriores </li>
+                  <li>No fallaste preguntas básicas</li>
+                </ul>
+                <h3>¡Cuidado con los errores comunes!</h3>
+                <p>Si acertaste preguntas difíciles (nivel B2 o C1) pero fallaste preguntas fáciles
+                  (nivel A1 o
+                  A2)...
+                  Entonces no eres nivel avanzado aún. Tienes conocimientos sueltos, no dominio
+                  completo.</p>
+                <p>A eso se le llama: <b>“Islas de conocimiento”</b>: sabes cosas difíciles, pero tu
+                  base es
+                  débil.
+                  Tienes
+                  conocimientos <b>aislados</b>, </p>
+                <h4>¿Qué señales indican que tienes islas de conocimiento?</h4>
+                <ul>
+                  <li>Puedes usar palabras difíciles, pero no sabes formar bien una frase básica.</li>
+                  <li>
+                    Puedes leer un texto complejo, pero no entiendes bien preguntas simples.</li>
+                  <li>Te sabes phrasal verbs o expresiones, pero fallas al usar tiempos verbales
+                    comunes.</li>
+                  <li>
+                    Acertaste preguntas C1, pero fallaste varias de nivel A1 o A2.</li>
+                </ul>
+                <p>📌 En ese caso, aunque hayas respondido bien preguntas B2 o C1, tu base no es sólida.
+                </p>
+                <h4></h4>
+                <ul>
+                  <li class="bullet-good">Sabes que "look up to" significa "admirar a alguien" (nivel
+                    alto),
+                  </li>
+                  <li class="bullet-bad">pero fallas al decir "She don't like pizza" en vez de "She
+                    <b>doesn't</b>
+                    like
+                    pizza".
+                  </li>
+                  <li class="bullet-good">Entendiste un texto sobre cambio climático (nivel B2),</li>
+                  <li class="bullet-bad">pero no sabes cuándo usar "since" o "for" correctamente.</li>
+                  <li class="bullet-good">Usas expresiones como “to be honest” o “as a matter of
+                    fact”,</li>
+                  <li class="bullet-bad">pero no sabes armar preguntas básicas como “Where do you
+                    live?”.</li>
+                </ul>
+
+                <h3>¿Qué significa esto para ti?</h3>
+                <p>No estás en nivel avanzado todavía. <b>Tienes que reforzar los fundamentos
+                    primero.</b></p>
+                <p>Porque en el CEFR, los niveles se construyen paso a paso. No puedes saltar de A2 a C1
+                  sin
+                  dominar
+                  lo
+                  intermedio.</p>
+                <h4>¿Qué hacer si tienes islas de conocimiento?</h4>
+                <ul>
+                  <li>Revisa las preguntas que fallaste en los niveles bajos (A1–A2).</li>
+                  <li>Refuerza tu base antes de seguir con lo avanzado </li>
+                  <li>Aprende y practica esas estructuras básicas. </li>
+                  <li>Luego vuelve a intentar con niveles más altos.</li>
+                </ul>
+                <p>No es retroceder. Es <b>rellenar los huecos</b> para poder avanzar sin que se te
+                  caiga el
+                  idioma
+                  por
+                  pedazos.</p>
+                <p>Recuerda: no es malo tener islas de conocimiento. Lo importante es <b>unirlas y
+                    construir el
+                    puente entre
+                    ellas.</b></p>
+              </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Learn English Hub </p>
+    <p><b>Coderhouse: JavaScript Flex - Entrega final </b></p>
+    <p>Daniel Molina Rubio</p>
+  </footer>
+  <script src="/JS/script.js"></script>
+</body>
+
+</html>
