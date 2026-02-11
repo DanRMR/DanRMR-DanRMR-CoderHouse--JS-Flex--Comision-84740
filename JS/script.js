@@ -21,12 +21,12 @@ form.addEventListener("change", function (event) {
 
   progresoExamen.respuestas[pregunta] = valor;
 
-  localStorage.setItem (progresoExamenKey, JSON.stringify(progresoExamen) );
+  localStorage.setItem(progresoExamenKey, JSON.stringify(progresoExamen));
 
 });
 
 // ...... RESTAURAR PROGRESO DEL EXAMEN ................
-window.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("DOMContentLoaded", function () {
   const progresoGuardado = localStorage.getItem(progresoExamenKey);
   if (!progresoGuardado) {
     return
@@ -36,11 +36,11 @@ window.addEventListener("DOMContentLoaded", function() {
 
   for (const pregunta in progresoExamen.respuestas) {
     const valor = progresoExamen.respuestas[pregunta];
-    if (!valor) {continue};
+    if (!valor) { continue };
 
     const input = document.querySelector(`input[name="${pregunta}"][value="${valor}"]`);
 
-    if (input) {input.checked = true};
+    if (input) { input.checked = true };
   }
 });
 
@@ -189,8 +189,8 @@ form.addEventListener('submit', function (event) {
     fecha: new Date().toISOString()
   };
 
-  localStorage.setItem (
-    "resultadoExamen",JSON.stringify(resultadoExamen)
+  localStorage.setItem(
+    "resultadoExamen", JSON.stringify(resultadoExamen)
   )
 
   localStorage.removeItem(progresoExamenKey);
@@ -343,6 +343,33 @@ Tu nivel general refleja el nivel más bajo necesario para funcionar de manera c
   }
 }
 
+// ..... MOSTRAR ULTIMO RESULTADO GUARDADO EN LOCALSTORAGE ..........
+window.addEventListener("DOMContentLoaded", function () {
+  const resultadoGuardado = this.localStorage.getItem("resultadoExamen");
+  if (!resultadoGuardado) {
+    return
+  }
 
+  const resultado = JSON.parse(resultadoGuardado);
 
-//// localStorage.setItem("resultado", JSON.stringify(resultado));
+  const contenedor = document.querySelector("#ultimoResultado");
+  if (!contenedor) {
+    return
+  };
+
+  contenedor.innerHTML = `
+  <div class="resultado-guardado">
+    <h5>Resultado de tu última  examen</h5>
+    <p><em>Fecha: ${new Date(resultado.fecha).toLocaleString()}</em></p>
+  </div>
+  <div class="resultado-guardado-habilidades">
+    <h6 class="fecha-ultimo-resultado"><strong>NIVEL GENERAL DE INGLÉS:</strong> ${resultado.nivelGeneral}</h6> 
+    <p>GRAMMAR: <b> ${resultado.grammar} </b></p>
+    <p>VOCABULARY:<b> ${resultado.vocabulary} </b></p>
+    <p>READING:<b> ${resultado.reading} </b></p>
+  </div>
+  `;
+
+  console.log("Ultimo resultado: ", resultado);
+
+});
