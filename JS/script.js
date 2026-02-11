@@ -2,6 +2,50 @@ console.log('JS funciona')
 
 const form = document.querySelector('#quiz-form');
 
+// ....... GUARDAR PROGRESO DEL EXAMEN EN EL LOCALSTORAGE (antes de darle submit) .......
+const progresoExamenKey = "progresoExamen";
+
+let progresoExamen = {
+  respuestas: {}
+}
+
+form.addEventListener("change", function (event) {
+  const input = event.target;
+
+  if (input.type !== "radio") {
+    return
+  };
+
+  const pregunta = input.name;
+  const valor = input.value;
+
+  progresoExamen.respuestas[pregunta] = valor;
+
+  localStorage.setItem (progresoExamenKey, JSON.stringify(progresoExamen) );
+
+});
+
+// ...... RESTAURAR PROGRESO DEL EXAMEN ................
+window.addEventListener("DOMContentLoaded", function() {
+  const progresoGuardado = localStorage.getItem(progresoExamenKey);
+  if (!progresoGuardado) {
+    return
+  };
+
+  progresoExamen = JSON.parse(progresoGuardado)
+
+  for (const pregunta in progresoExamen.respuestas) {
+    const valor = progresoExamen.respuestas[pregunta];
+    if (!valor) {continue};
+
+    const input = document.querySelector(`input[name="${pregunta}"][value="${valor}"]`);
+
+    if (input) {input.checked = true};
+  }
+});
+
+
+
 const respuestasCorrectas = {
   //grammar 
   q1: "lives",
@@ -136,6 +180,20 @@ form.addEventListener('submit', function (event) {
   mostrarResultadoPorHabilidad();
   mostrarNivelGeneral(nivelGeneral);
 
+  // Resultado Final para localStorage
+  const resultadoExamen = {
+    nivelGeneral: nivelGeneral,
+    grammar: resultadoPorHabilidad.grammar.nivel,
+    vocabulary: resultadoPorHabilidad.vocabulary.nivel,
+    reading: resultadoPorHabilidad.reading.nivel,
+    fecha: new Date().toISOString()
+  };
+
+  localStorage.setItem (
+    "resultadoExamen",JSON.stringify(resultadoExamen)
+  )
+
+  localStorage.removeItem(progresoExamenKey);
 
 });
 
