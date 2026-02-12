@@ -1,4 +1,22 @@
-console.log('JS funciona')
+let respuestasCorrectas = {}
+
+async function cargarRespuestas() {
+  try {
+    const response = await fetch("data/respuestasCorrectas.json");
+
+    if (!response.ok) {
+      throw new Error(`no se pudo cargar las respuestas`)
+    }
+
+    respuestasCorrectas = await response.json();
+
+  } catch (error) {
+  }
+}
+
+window.addEventListener("DOMContentLoaded", cargarRespuestas);
+
+
 
 const form = document.querySelector('#quiz-form');
 
@@ -46,41 +64,6 @@ window.addEventListener("DOMContentLoaded", function () {
 
 
 
-const respuestasCorrectas = {
-  //grammar 
-  q1: "lives",
-  q2: "do",
-  q3: "since",
-  q4: "understood",
-  q5: "did we see",
-  q6: "despite",
-  // Vocabulary
-  q7: "wake up",
-  q8: "coffee",
-  q9: "have",
-  q10: "delayed",
-  q11: "give",
-  q12: "think",
-  q13: "proposed",
-  q14: "flawed",
-  q15: "due to",
-  q16: "compromise",
-  q17: "commitment",
-  q18: "consequences",
-  // Reading 
-  q19: "At six thirty",
-  q20: "She visits her sister",
-  q21: "Register online",
-  q22: "one hour",
-  q23: "To meet others",
-  q24: "positive and negative effects",
-  q25: "propose ideas",
-  q26: "potential results",
-  q27: "reduced car trips",
-  q28: "decisions vs connection",
-  q29: "ignores factors",
-  q30: "Cautiously positive"
-}
 
 const estructuraEvaluacion = {
   grammar: {
@@ -369,7 +352,5 @@ window.addEventListener("DOMContentLoaded", function () {
     <p>READING:<b> ${resultado.reading} </b></p>
   </div>
   `;
-
-  console.log("Ultimo resultado: ", resultado);
 
 });
