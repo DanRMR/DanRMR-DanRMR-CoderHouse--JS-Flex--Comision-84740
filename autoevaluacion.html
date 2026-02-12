@@ -125,7 +125,7 @@
 
                   <div id="ultimoResultado" class="last-result"></div>
 
-                  <!-- GRAMMAR -->
+                  <!------------ GRAMMAR --------------->
                   <details class="system-skill-drop">
                     <summary>SECTION 1: GRAMMAR (6 preguntas)</summary>
 
@@ -977,8 +977,8 @@
 
                           <div class="multiple-choice">
 
-                            <div><input id="q19-At-seven-thirty" type="radio" name="q19" value="At seven thirty" r
-                                equired>
+                            <div>
+                              <input id="q19-At-seven-thirty" type="radio" name="q19" value="At seven thirty" required>
                               <label for="q19-At-seven-thirty">At seven thirty</label>
                             </div>
 
@@ -989,7 +989,7 @@
 
                             <div>
                               <input id="q19-At-six-thirty" type="radio" name="q19" value="At six thirty">
-                              <label for="q19-At six thirty">At six thirty</label> <!--correct-->
+                              <label for="q19-At-six-thirty">At six thirty</label> <!--correct-->
                             </div>
 
                             <div>
@@ -1071,7 +1071,7 @@
 
                             <div>
                               <input id="q21-Arrive-at-10" type="radio" name="q21" value="Arrive at 10">
-                              <label for="q21-Arrive-at-10. exactly">Arrive at 10 a.m. exactly</label>
+                              <label for="q21-Arrive-at-10">Arrive at 10 a.m. exactly</label>
                             </div>
 
                             <div>
@@ -1507,18 +1507,11 @@
                     </div>
                   </details>
 
-                  <div id="resultadoHabilidades">
-                    <h3 class="result" id="numeroRespuestasCorrectas"></h3>
-                    <p class="nivel-ingles-general" id="resultadoNivelGeneral"></p>
-                    <p class="nivel-grammar" id="resultadoNivelGrammar"></p>
-                    <p class="nivel-vocabulary" id="resultadoNivelVocabulary"></p>
-                    <p class="nivel-reading" id="resultadoNivelReading"></p>
-                  </div>
-
                   <div class="botones-submit-reset">
                     <button class="boton boton-evaluar" type="submit">Assess my level</button>
                     <button class="boton boton-reset" type="reset">Reset</button>
                   </div>
+
 
                 </form>
 
@@ -1529,10 +1522,21 @@
 
 
           <!-- Explicación Nivel Real -->
-          <div class="content-box">
-            <h2>REGLA: ¿Cuál es tu nivel real?</h3>
+          <div id="explicacion-nivel" class="content-box" style="display: none">
+            <h2>¿Cuál es tu nivel real?</h3>
+
+              <div id="resultadoHabilidades" class="resultado-nivel">
+                <h3 class="result" id="numeroRespuestasCorrectas"></h3>
+                <h5 class="nivel-ingles-general" id="resultadoNivelGeneral"></h5>
+                <div>
+                  <p class="nivel-grammar" id="resultadoNivelGrammar"></p>
+                  <p class="nivel-vocabulary" id="resultadoNivelVocabulary"></p>
+                  <p class="nivel-reading" id="resultadoNivelReading"></p>
+                </div>
+              </div>
 
               <div>
+                <h3>REGLA:</h3>
                 <p><b>Tu nivel real es el último nivel que dominas de forma consistente.</b></p>
                 <p>Eso significa:</p>
                 <ul>

@@ -178,6 +178,8 @@ form.addEventListener('submit', function (event) {
 
   localStorage.removeItem(progresoExamenKey);
 
+  document.getElementById("explicacion-nivel").style.display = "block";
+
 });
 
 // ................  AL DARLE RESET ..........................  
@@ -321,7 +323,7 @@ function mostrarResultadoPorHabilidad() {
 function mostrarNivelGeneral(nivelGeneral) {
   const elemento = document.querySelector("#resultadoNivelGeneral");
   if (elemento) {
-    elemento.textContent = `Nivel global: ${nivelGeneral}
+    elemento.innerHTML = `Nivel global: ${nivelGeneral}. <br>
 Tu nivel general refleja el nivel más bajo necesario para funcionar de manera consistente según el CEFR.`;
   }
 }
